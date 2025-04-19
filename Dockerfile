@@ -17,5 +17,5 @@ USER odoo
 # (Optional) Copy custom addons later
 # COPY --chown=odoo:odoo ./custom-addons /mnt/extra-addons
 
-CMD ["odoo", "-i", "base", "-d", "odoo18_db", "--db_host=dpg-d01rio3e5dus73bgijq0-a", "--db_port=5432", "--db_user=odoo18_db_user", "--db_password=Atoo3a4y2hOXwaOo24WMpReYWvtEXU4O"]
+CMD ["odoo", "-i", "base", "-d", "odoo18_db_6kzu", "--db_host=dpg-d01tqt7gi27c73f1a69g-a", "--db_port=5432", "--db_user=odoo18_db_6kzu_user", "--db_password=13OyT8m9bHqFuTAZBXqDOuTFZ0zYX7yM"]
 
