@@ -5,7 +5,7 @@ USER root
 RUN apt update && apt install -y \
     wkhtmltopdf \
     libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev \
-    libjpeg-dev libpq-dev libffi-dev libssl-dev \
+    libjpeg-dev libffi-dev libssl-dev \
     && apt clean
 
 USER odoo
