@@ -8,11 +8,13 @@ RUN apt update && apt install -y \
     libjpeg-dev libffi-dev libssl-dev \
     && apt clean
 
+# Copy our custom config
+COPY ./odoo.conf /etc/odoo/odoo.conf
+RUN chown odoo:odoo /etc/odoo/odoo.conf
+
 USER odoo
 
-# (Optional) Copy custom addons folder
+# (Optional) Copy custom addons later
 # COPY --chown=odoo:odoo ./custom-addons /mnt/extra-addons
 
-CMD ["odoo", "--no-config", "--db_host=${DB_HOST}", "--db_port=${DB_PORT}", "--db_user=${DB_USER}", "--db_password=${DB_PASSWORD}", "--db_name=${DB_NAME}", "--dev=all"]
-
-
+CMD ["odoo", "-c", "/etc/odoo/odoo.conf"]
