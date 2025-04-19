@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.9
 
 RUN apt update && apt install -y \
     git build-essential wget python3-dev \
