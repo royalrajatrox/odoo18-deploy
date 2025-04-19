@@ -13,4 +13,5 @@ USER odoo
 # (Optional) Copy custom addons folder
 # COPY --chown=odoo:odoo ./custom-addons /mnt/extra-addons
 
-CMD ["odoo", "-c", "/etc/odoo/odoo.conf", "--db_host=${DB_HOST}", "--db_port=${DB_PORT}", "--db_user=${DB_USER}", "--db_password=${DB_PASSWORD}", "--db_name=${DB_NAME}", "--dev=all"]
+CMD ["odoo", "--db_host=${DB_HOST}", "--db_port=${DB_PORT}", "--db_user=${DB_USER}", "--db_password=${DB_PASSWORD}", "--db_name=${DB_NAME}", "--dev=all"]
+
